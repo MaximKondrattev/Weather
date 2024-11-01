@@ -33,14 +33,14 @@
             @click="confirmDeleteBlock(index)"
             class="delete-btn"
           >
-            Удалить
+            Delete
           </button>
           <button
             v-else
             @click="removeFromFavorites(block.cityName)"
             class="remove-favorite-btn"
           >
-            Убрать из избранного
+            Remove from favorites
           </button>
         </div>
       </div>
@@ -56,7 +56,7 @@
       v-if="showFavoritesModal"
       class="modal"
     >
-      <p>Достигнут максимальный лимит избранных городов (5)</p>
+      <p>Maximum limit of selected cities reached (5)</p>
       <button @click="showFavoritesModal = false">OK</button>
     </div>
   </div>
@@ -219,46 +219,6 @@ export default defineComponent({
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Модальное окно и оверлей */
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 24px;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-  text-align: center;
-  min-width: 320px;
-  z-index: 1001;
-  animation: modalAppear 0.3s ease;
-}
-
-.modal::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  animation: overlayAppear 0.3s ease;
-}
-
-.modal p {
-  margin: 0 0 20px;
-  font-size: 1.1rem;
-  color: #343a40;
-}
-
-.modal-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-
-/* Кнопки */
 .add-block-btn {
   position: relative;
   width: 48px;
@@ -313,26 +273,6 @@ export default defineComponent({
   background-color: #c82333;
   box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
   transform: translateY(-1px);
-}
-
-@keyframes modalAppear {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -60%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-}
-
-@keyframes overlayAppear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -423,7 +363,6 @@ export default defineComponent({
   }
 }
 
-/* Добавляем стили для очень маленьких экранов */
 @media screen and (max-width: 360px) {
   .app-container {
     min-width: 360px;

@@ -4,13 +4,13 @@
       :class="{ active: modelValue === 'day' }"
       @click="$emit('update:modelValue', 'day')"
     >
-      День
+      Day
     </button>
     <button
       :class="{ active: modelValue === 'week' }"
       @click="$emit('update:modelValue', 'week')"
     >
-      Неделя
+      5 Days
     </button>
   </div>
 </template>

@@ -3,19 +3,19 @@
     v-if="show"
     class="modal"
   >
-    <p>Вы уверены, что хотите удалить блок?</p>
+    <p>Are you sure you want to delete the block?</p>
     <div class="modal-buttons">
       <button
         class="modal-delete"
         @click="$emit('confirm')"
       >
-        Да
+        Yes
       </button>
       <button
         class="modal-cancel"
         @click="$emit('close')"
       >
-        Нет
+        No
       </button>
     </div>
   </div>
@@ -99,5 +99,24 @@ export default defineComponent({
 .modal button:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes overlayAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>

@@ -3,7 +3,7 @@
     <input
       type="text"
       v-model="query"
-      placeholder="Введите название города..."
+      placeholder="Enter city name..."
       @input="onInput"
       class="autocomplete-input"
     />
@@ -56,7 +56,7 @@ export default defineComponent({
             country: city.country,
           }));
         } catch (error) {
-          console.error("Ошибка при запросе городов:", error);
+          console.error("Error while requesting cities:", error);
         }
       } else {
         suggestions.value = [];

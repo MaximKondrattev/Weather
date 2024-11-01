@@ -6,20 +6,15 @@
         class="favorite-button"
         @click="toggleFavorite"
       >
-        {{ isFavorite ? "Удалить из избранного" : "Добавить в избранное" }}
+        {{ isFavorite ? "Remove from favorites" : "Add to Favorites" }}
       </button>
     </div>
 
     <WeatherTabs v-model="selectedTab" />
 
-    <div
-      v-if="isLoading"
-      class="loader"
-    >
-      Загрузка...
-    </div>
+    <Preloader v-if="isLoading" />
 
-    <template v-if="displayWeatherData">
+    <template v-if="displayWeatherData && !isLoading">
       <div class="weather-info">
         <div class="city-info">
           <h2>{{ displayWeatherData.name }}</h2>
@@ -68,6 +63,7 @@ import CityAutocomplete from "./CityAutocomplete.vue";
 import WeatherChart from "./WatherChart.vue";
 import WeatherTabs from "./WeatherTabs.vue";
 import WeatherDetails from "./WeatherDetails.vue";
+import Preloader from "./Preloader.vue";
 
 export default defineComponent({
   name: "WeatherCard",
@@ -77,6 +73,7 @@ export default defineComponent({
     WeatherChart,
     WeatherTabs,
     WeatherDetails,
+    Preloader,
   },
 
   props: {

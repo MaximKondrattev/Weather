@@ -33,7 +33,7 @@ export default defineComponent({
             labels: props.hourlyData.map((data) => data.time),
             datasets: [
               {
-                label: "Температура (°C)",
+                label: "Temperature (°C)",
                 data: props.hourlyData.map((data) => data.temp),
                 fill: false,
                 borderColor: "#ff5722",
@@ -48,13 +48,13 @@ export default defineComponent({
               x: {
                 title: {
                   display: true,
-                  text: "Время",
+                  text: "Time",
                 },
               },
               y: {
                 title: {
                   display: true,
-                  text: "Температура (°C)",
+                  text: "Temperature (°C)",
                 },
                 beginAtZero: false,
               },

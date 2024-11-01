@@ -1,18 +1,23 @@
 <template>
   <header class="app-header">
-    <h1>Логотип</h1>
+    <div class="logo">
+      <img
+        src="../assets/logo.png"
+        alt=""
+      />
+    </div>
     <nav class="tabs">
       <button
         @click="$emit('update:tab', 'main')"
         :class="{ active: currentTab === 'main' }"
       >
-        Главная
+        Home
       </button>
       <button
         @click="$emit('update:tab', 'favorite')"
         :class="{ active: currentTab === 'favorite' }"
       >
-        Избранное
+        Favorites
       </button>
     </nav>
   </header>
@@ -43,6 +48,10 @@ export default defineComponent({
   background-color: #f8f9fa;
   border-bottom: 2px solid #007bff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.logo img {
+  width: 48px;
+  height: 48px;
 }
 
 .tabs {

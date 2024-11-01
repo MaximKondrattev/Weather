@@ -1,4 +1,4 @@
-import { ref, computed } from "vue";
+import { ref } from "vue";
 import type { WeatherBlock } from "../types/WeatherBlock";
 import type { WeatherData } from "../types/WatherType";
 

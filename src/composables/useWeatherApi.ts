@@ -46,7 +46,7 @@ export function useWeatherApi() {
         weather: data.weather,
       };
     } catch (error) {
-      console.error("Ошибка при загрузке данных о погоде:", error);
+      console.error("Error loading weather data:", error);
       return null;
     } finally {
       isLoading.value = false;
@@ -77,7 +77,7 @@ export function useWeatherApi() {
         temp: entry.main.temp,
       }));
     } catch (error) {
-      console.error("Ошибка при загрузке почасовых данных:", error);
+      console.error("Error loading hourly data:", error);
       return [];
     } finally {
       isLoading.value = false;
@@ -122,7 +122,7 @@ export function useWeatherApi() {
         temp: +(dailyData[date].sumTemp / dailyData[date].count).toFixed(1),
       }));
     } catch (error) {
-      console.error("Ошибка при загрузке данных на неделю:", error);
+      console.error("Error loading data for the week:", error);
       return [];
     } finally {
       isLoading.value = false;

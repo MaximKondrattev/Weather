@@ -3,7 +3,7 @@
     <div class="detail-item">
       <div class="detail-icon">🌡️</div>
       <div class="detail-info">
-        <div class="detail-label">Ощущается как</div>
+        <div class="detail-label">Feels like</div>
         <div class="detail-value">{{ weather.main?.feels_like }}°C</div>
       </div>
     </div>
@@ -11,7 +11,7 @@
     <div class="detail-item">
       <div class="detail-icon">💨</div>
       <div class="detail-info">
-        <div class="detail-label">Ветер</div>
+        <div class="detail-label">Wind</div>
         <div class="detail-value">{{ weather.wind?.speed }} м/с</div>
       </div>
     </div>
@@ -19,7 +19,7 @@
     <div class="detail-item">
       <div class="detail-icon">💧</div>
       <div class="detail-info">
-        <div class="detail-label">Влажность</div>
+        <div class="detail-label">Humidity</div>
         <div class="detail-value">{{ weather.humidity }}%</div>
       </div>
     </div>
@@ -27,7 +27,7 @@
     <div class="detail-item">
       <div class="detail-icon">🌡️</div>
       <div class="detail-info">
-        <div class="detail-label">Температура</div>
+        <div class="detail-label">Temperature</div>
         <div class="detail-value">
           {{ weather.main?.temp_min }}° / {{ weather.main?.temp_max }}°
         </div>
