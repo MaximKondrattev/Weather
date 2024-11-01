@@ -11,9 +11,7 @@
         @click="addWeatherBlock"
         :disabled="weatherBlocks.length >= 5"
         class="add-block-btn"
-      >
-        +
-      </button>
+      ></button>
 
       <div
         v-for="(block, index) in displayedBlocks"
