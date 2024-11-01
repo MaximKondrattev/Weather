@@ -3,10 +3,10 @@ import axios from "axios";
 export function useLocationDetection() {
   const fetchLocationByIP = async (): Promise<string | null> => {
     try {
-      const response = await axios.get("http://ip-api.com/json/");
+      const response = await axios.get("https://ipapi.co/json/");
       return response.data.city || null;
     } catch (error) {
-      console.error("Ошибка при определении города по IP:", error);
+      console.error("Error in determining city by IP:", error);
       return null;
     }
   };
